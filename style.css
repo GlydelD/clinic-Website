@@ -1,0 +1,129 @@
+body {
+  font-family: Open Sans;
+  margin:0;
+  padding:0;
+  overflow-x: hidden;
+}
+:root {
+  --1color: #164863;
+  --2color: #427D9D;
+  --3color:#9BBEC8;
+  --4color: #DDF2FD;
+}
+.navbar {
+  overflow: hidden;
+  background-color:var(--1color);
+}
+
+.navbar p {
+  display: inline-flex;
+  font-size: 20px;
+  /* margin-top: 2vh; */
+  color: white;
+  text-align: center;
+  margin-top: 3vh;
+  text-decoration: none;
+}
+#logo  {
+  width: 8vw; 
+  height: auto;
+  margin-top:1vh;
+  margin-bottom: -1.7vh;
+  margin-left: 2vw;
+  display: inline-block;
+  } 
+  .main-container {
+    width: 100vw;
+    height: 100vh;
+    /* background-image: url(media/bglogin.png); */
+    /* animation-name: changeBG; */
+    background-repeat: no-repeat;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}
+
+.login-container {
+    width: 30vw;
+    border-radius: 15px;
+    height: 50vh;
+    box-shadow: 1px 1px 5px black;
+    position: fixed;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: 20vh;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.header {
+    width: 30vw;
+    height: 10vh;
+    background-color: var(--2color);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    color: white;
+    text-align: center;
+}
+
+.title {
+    font-size: 3.8vh;
+    padding: 2.1vh;
+    font-weight: bolder;
+}
+
+.row {
+    width: 26vw;
+    height: 6.5vh;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.first {
+    margin-top: 5vh;
+}
+.row label {
+  margin-top: 5vh;
+
+}
+
+input[type=text], input[type=password] {
+    text-align: center;
+    padding: 1.5vh 5vw;
+    border: 1px solid grey;
+    border-radius: 3px;
+    border-radius: 30px;
+
+}
+.login-container label {
+    display: block;
+    width: 100%;
+    margin-bottom: 2px;
+    letter-spacing: .5px;
+    text-align: left;
+    margin-left:2vw;
+    /* margin-top:10vh; */
+  
+}
+
+input[type=submit] {
+    text-align: center;
+    padding: 1.5vh 10vw;
+    border: 0;
+    border-radius: 4px;
+    background-color: var(--1color);
+    color: white;
+    font-size: 2vh;
+    font-weight: bolder;
+    border-radius: 30px;
+    margin-top:5vh;
+
+
+}
+
+input[type=submit]:hover {
+    background-color: var(--2color);
+    cursor: pointer;
+}
+
+  /* ============================= */
+  

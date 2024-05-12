@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "shortcut icon" type = "icon" href = "media/logo.png">
+    <link rel="stylesheet" href="css/home-Patient-Information-Style.css">
+    <title>Patients Information</title>
+    <link rel = "shortcut icon" type = "icon" href = "media/logo.png">
+</head>
+
+<body background="media/bg.png">
+    <form method ="post" action = "home-Patient-Information-DB.php"> 
+    <div class="navbar">
+        <p>STUDENT HEALTH SERVICES CLINIC</p>
+
+        <div class="dropdown">
+          <div class="dropbtn">
+            <div class="menu-icon"></div>
+            <div class="menu-icon"></div>
+            <div class="menu-icon"></div>
+            <i class="ddown"></i> 
+          </div>
+
+          <div class="dropdown-content">
+              <a href="homePatientsInformations.html" class="icon"><img src="media/person1.png"> Add Patients Information </a>
+              <a href="homePatientsReportsConfirmation.php" class="icon"><img src="media/report1.png"> Add Patients Report </a>
+              <a href="patients-Showing-Information.php" class="icon"><img src="media/person.png"> Patients  </a>
+              <a href="patients-Showing-Reports.php" class="icon"><img src="media/report.png"> Reports </a>
+              <!-- <a href="" class="icon"><img src="media/prospectus.png"> Prospectus </a> -->
+            </div>
+        </div>
+
+        <div class="dropdown2">
+          <div class="dropbtn2">  
+            <div class="name-icon"><img src="media/person.png"></div>
+            <div class="name"> Clinic   </div>
+            <i class="ddown2"></i>
+          </div>
+          <div class="dropdown-content2">
+            <a href="login-Admin.html" class="icon2"><img src="media/logout.png"> Logout </a>
+          </div>
+        </div>
+    </div>
+<!--===================confirm details================  -->
+    <div class="confirm-details-box" id="modal-box">
+        <div class="confirm-modal-content">
+            <h1 id="enroll-submit">Confirm Details</h1>
+            <p id="modal-details">Confirm the details below before submitting your information.</p>
+            <div id="button-close-modal" onclick="showConfirmModal()" >X</div>
+            <div class="table-confirm-details">
+                <div class="row-table">
+                    <p id="fNameLbl">Firstname: </p>
+                </div>
+                <div class="row-table">
+                    <p id="mNameLbl">Middlename:</p>
+                </div>
+                <div class="row-table">
+                    <p id="lNameLbl">Lastname:</p>
+                </div>
+                <div class="row-table">
+                    <p id="ageLbl">Age:</p>
+                </div>
+                <div class="row-table">
+                    <p id="sexLbl">Sex:</p>
+                </div>
+                <div class="row-table">
+                    <p id="birthdayLbl">Birthdate:</p>
+                </div>
+                <div class="row-table">
+                    <p id="courseLbl">Course:</p>
+                </div>
+                <div class="row-table">
+                    <p id="addressLbl">Address:</p>
+                </div>
+                <div class="row-table">
+                    <p id="cNumberLbl">Contact Number:</p>
+                </div>
+                <div class="row-table">
+                    <p id="parentNameLbl">Parent/Guardian Name:</p>
+                </div>
+                <div class="row-table">
+                    <p id="parentCnumberLbl">Contact Number:</p>
+                </div>
+                <div class="row-table">
+                    <input type="submit" name="submit-btn" id="submit-to-database">
+                </div>
+            </div>
+        </div>
+    </div>
+<!--------------------------- HOME CONTENT ---------------------------------->
+   
+    <div class="patients-Information-Cont" id="patients-informtions-incont" >
+        <div class="patients-info">
+            <div  id="patients-Label">
+                 <p>Patient's Information</p>
+            </div>
+            <table id="table-form">
+                <tr>
+                    <td style="text-align: left;">Firstname: </td>
+                    <td><input type="text" placeholder="Ex: Maria" required name="firstName" id="firstName" value=""></td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Middlename: </td>
+                    <td><input type="text" placeholder="Ex: Kaye" required name="midName" id="midName"></td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Lastname: </td>
+                    <td><input type="text" placeholder="Ex: Valdez" required name="lastName" id="lastName"></td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Age: </td>
+                    <td><input type="text" placeholder="Ex:19" name="age" id="age" required></td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Sex: </td>
+                    <td><select name="sex" id="sex" class="select-course" required>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Birthdate: </td>
+                    <td><input type="date" name="birthdate" id="birthdate"></td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Course: </td>
+                    <td><select name="course" class="select-course" id="course" required>
+                        <option value="BSIT">Bachelor of Science in Information Technology</option>
+                        <option value="BSED">Bachelor of Science in Secondary Education</option>
+                        <option value="BEED">Bachelor of Science in Elementary Education</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Address: </td>
+                    <td><input type="text" placeholder="Ex: Ecoland Drive, Samal, Philippines" name="address" id="address" required></td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Contact Number: </td>
+                    <td><input type="text" placeholder="Ex: 09091234567" name="cNumber" id="cNumber" required></td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Parent/Guardian Name: </td>
+                    <td><input type="text" placeholder="Ex: Abby Mercedes" name="parentName" id="parentName" required></td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Contact Number: </td>
+                    <td><input type="text" placeholder="Ex: 0921782127" name="parentCNumber" id="parentCNumber" required></td>
+                </tr>
+                <tr>
+                        <td colspan="2"> <div class="patientsSaveButton" onclick="callValues()" name="patients-Save-Button">Save</div> </td>
+                </tr>
+
+            </table>
+        </form>
+        </div>
+        </div>
+        <script src="script.js"></script>
+
+<!-- =========================================== -->
+     
+
+</body>
+</html>

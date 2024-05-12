@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body background="media/bg.png">
+    <div class="navbar">
+        <table> 
+            <tr>
+                <td>
+                    <img id = "logo" src="media/logo.png">
+                    <p>STUDENT HEALTH SERVICES CLINIC</p>
+                </td>
+            </tr>
+        </table>
+        </div>
+    <div class="main-container">
+    <form method ="post" action="login-Admin.php">
+        <div class="login-container">
+            <div class="header">
+                <div class="title">Admin Clinic Login</div>
+            </div>
+            <div class="row first">
+                <label>Username<span>*</span></label>
+                <input type="text" name="username" id="username" placeholder="admin" required/>
+            </div>
+            <div class="row">
+                <label>Password<span>*</span></label>
+                <input type="password" name="password" id="username" placeholder="admin123" required/>
+            </div>
+            <div class="row">
+                <input type="submit" value="Login" name="login">
+            </div>
+        </div>
+    </form>
+
+</body>
+</html>
